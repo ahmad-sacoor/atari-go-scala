@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-padding: 20; -fx-background-color: #f8f8f8;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+
+   <Label style="-fx-font-size: 24px;" text="Atari Go – JavaFX GUI" />
+
+   <HBox alignment="CENTER" spacing="10">
+      <Label text="Board Size:" />
+      <Spinner fx:id="boardSizeSpinner" prefWidth="80" />
+      <Label text="Capture Goal:" />
+      <TextField fx:id="captureGoalField" prefWidth="60" />
+      <Label text="Time Limit (s):" />
+      <TextField fx:id="timeLimitField" prefWidth="60" />
+      <Button fx:id="startButton" onAction="#onStartGame" text="Start Game" />
+   </HBox>
+
+
+   <Pane fx:id="boardPane" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #d8a964; -fx-border-color: black; -fx-border-width: 2;" />
+
+   <Label fx:id="statusLabel1" style="-fx-font-size: 14px;" text="" />
+   <Label fx:id="statusLabel2" style="-fx-font-size: 14px;" text="" />
+
+
+   <HBox spacing="10">
+      <Button fx:id="restartButton" onAction="#onRestart" text="Restart Game" />
+      <Button fx:id="undoButton" onAction="#onUndo" text="Undo" />
+   </HBox>
+</VBox>
